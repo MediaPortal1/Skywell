@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Skywell</string>
+
+    <!--VK APP ID-->
+    <integer name="com_vk_sdk_AppId">5705224</integer>
+
+    <string name="login_sign_in_vk">Sign in with VK</string>
+    <string name="user_name">Name</string>
+    <string name="user_bdate">Birthday</string>
+    <string name="user_nickname">Nickname</string>
+    <string name="post_text">Post text</string>
+    <string name="post_id">Post id</string>
+    <string name="post_from_id">Id from</string>
+    <string name="post_to_id">Id to</string>
+    <string name="post_type">Post type</string>
+
+</resources>

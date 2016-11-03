@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.vk.sdk.api.model.VKApiPost" />
+
+        <import
+            alias="view"
+            type="android.view.View" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        cardview:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/post_text+':'+' '+post.text}"
+                android:visibility="@{post.text!=null ? view.VISIBLE : view.GONE}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/post_id+':'+' '+post.id}"
+                android:visibility="@{post.id!=0 ? view.VISIBLE : view.GONE}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/post_from_id+':'+' '+post.from_id}"
+                android:visibility="@{post.from_id!=0 ? view.VISIBLE : view.GONE}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/post_to_id+':'+' '+post.to_id}"
+                android:visibility="@{post.to_id!=0 ? view.VISIBLE : view.GONE}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/post_type+':'+' '+post.type}"
+                android:visibility="@{post.type!=null ? view.VISIBLE : view.GONE}" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>
